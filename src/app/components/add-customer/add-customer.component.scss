@@ -1,0 +1,18 @@
+.heading-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.label-and-input-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.button-container{
+    display: flex;
+    justify-content: end;
+}
+.cancel-button{
+    margin-right: 10px;
+}

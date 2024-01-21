@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="row">
+        <div class="col heading-container">
+            <h1>Customer List</h1>
+        </div>
+    </div>
+    <div class="row search-and-add-customer-container">
+        <div class="col-1"></div>
+        <div class="col-2">
+            <button (click)="navigateToAddCustomer()" type="button" class="btn btn-primary">Add Customer</button>
+        </div>
+        <div class="col-2">
+            <input type="text" class="form-control" placeholder="Search..." aria-label="Username">
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-10 offset-1">
+           <table class="table table-hover">
+    <thead>
+        <tr>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+          <th scope="col">Street</th>
+          <th scope="col">Address</th>
+          <th scope="col">City</th>
+          <th scope="col">State</th>
+          <th scope="col">Email</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (customer of customers; track customer.customerId;) {
+            <tr>
+                <td>{{customer.firstName}}</td>
+                <td>{{ customer.lastName }}</td>
+                <td>{{ customer.street }}</td>
+                <td>{{ customer.address }}</td>
+                <td>{{ customer.city }}</td>
+                <td>{{ customer.state }}</td>
+                <td>{{ customer.email }}</td>
+                <td>{{ customer.phone }}</td>
+                <td>
+                <button type="button" (click)="navigateToEditCustomer(customer.customerId)"  class="btn btn-primary edit-button">Edit</button>
+                <button type="button" (click)="deleteCustomer(customer.customerId)" class="btn btn-danger">Delete</button>
+                </td>
+            </tr>
+          } @empty {
+            <span>No Users</span>
+          }
+
+      </tbody>
+  </table> 
+        </div>
+    </div>
+</div>

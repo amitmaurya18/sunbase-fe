@@ -1,0 +1,79 @@
+<div class="container">
+    <div class="row">
+        <div class="col heading-container">
+            <h1>Add Customer</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col offset-1">
+    <form [formGroup]="addCustomerForm" (ngSubmit)="saveCustomer()">
+        <!-- First Name -->
+        <div class="row label-and-input-container">
+            <div class="col-2 label-container">
+                <label for="exampleInputEmail1" class="form-label">First Name</label></div>
+            <div class="col-4"><input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="firstName">
+            </div>
+        </div>
+        <!-- Last Name -->
+        <div class="row label-and-input-container">
+            <div class="col-2 label-container">
+                <label for="exampleInputEmail1" class="form-label">Last Name</label></div>
+            <div class="col-4"><input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="lastName">
+            </div>
+        </div>
+        <!-- Street -->
+        <div class="row label-and-input-container">
+            <div class="col-2 label-container">
+                <label for="exampleInputEmail1" class="form-label">Street</label></div>
+            <div class="col-4"><input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="street">
+            </div>
+        </div>
+        <!-- Address -->
+        <div class="row label-and-input-container">
+            <div class="col-2 label-container">
+                <label for="exampleInputEmail1" class="form-label">Address</label></div>
+            <div class="col-4"><input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="address">
+            </div>
+        </div>
+        <!-- City -->
+        <div class="row label-and-input-container">
+            <div class="col-2 label-container">
+                <label for="exampleInputEmail1" class="form-label">City</label></div>
+            <div class="col-4"><input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="city">
+            </div>
+        </div>
+        <!-- State -->
+        <div class="row label-and-input-container">
+            <div class="col-2 label-container">
+                <label for="exampleInputEmail1" class="form-label">State</label></div>
+            <div class="col-4"><input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="state">
+            </div>
+        </div>
+        <!-- Email -->
+        <div class="row label-and-input-container">
+            <div class="col-2 label-container">
+                <label for="exampleInputEmail1" class="form-label">Email</label></div>
+            <div class="col-4"><input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="email">
+            </div>
+        </div>
+        <!-- Phone -->
+        <div class="row label-and-input-container">
+            <div class="col-2 label-container">
+                <label for="exampleInputEmail1" class="form-label">Phone</label></div>
+            <div class="col-4"><input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="phone">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6 offset-3 button-container">
+                <button type="button" (click)="navigateToCustomerList()" class="btn btn-primary cancel-button">Cancel</button>
+                <button type="submit" class="btn btn-success ">Save</button>
+            </div>
+        </div>
+
+
+    </form>
+        </div>
+    </div>
+
+</div>
