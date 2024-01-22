@@ -2,16 +2,17 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { LoginService } from '../../services/login/login.service';
 import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, CommonModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
-
+  errorMessage: string = '';
   constructor(private loginService: LoginService, private router: Router){
 
   }
@@ -37,6 +38,7 @@ export class LoginComponent {
       error => {
         // Handle login error
         console.error(error);
+        this.errorMessage = 'Invalid email or password';
       }
     );
   }
