@@ -8,9 +8,9 @@
         <div class="col-1"></div>
         <div class="col-2">
             <button (click)="navigateToAddCustomer()" type="button" class="btn btn-primary">Add Customer</button>
-        </div>
+        </div>     
         <div class="col-2">
-            <input type="text" class="form-control" placeholder="Search..." aria-label="Username">
+            <input type="text" class="form-control" placeholder="Search..." (input)="onSearchChange($event)" aria-label="Username">
         </div>
 
     </div>
